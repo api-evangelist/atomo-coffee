@@ -1,8 +1,24 @@
 aid: atomo-coffee
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/atomo-coffee.png
 name: Atomo Coffee
-description: 'Atomo Coffee is a company surfaced as a portfolio company of bessemer-venture-partners and
-  added to the API Evangelist network as a stub for enrichment. Sector: deep-tech. This profile is a lead
-  awaiting the enrichment pipeline.'
+description: 'Atomo Coffee is a Seattle-based food-tech company that makes beanless "molecular" coffee: it
+  reverse-engineers the coffee bean and reconstructs the taste, aroma, and caffeine of coffee from upcycled,
+  naturally derived plant ingredients, producing cold brew, ground, and canned products with a lower carbon
+  and water footprint than conventional bean-grown coffee. Backed by bessemer-venture-partners and other
+  investors, it sells direct-to-consumer through a Shopify storefront at atomocoffee.com. Atomo is a consumer
+  packaged-goods brand and publishes no first-party developer API; this profile is maintained in the API
+  Evangelist network as a company record. Sector: deep-tech / food-tech.'
 url: https://raw.githubusercontent.com/api-evangelist/atomo-coffee/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +28,15 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Deep Tech
+- Food Tech
+- Coffee
+- Consumer Packaged Goods
+- Sustainability
+- E-Commerce
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +44,18 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/atomo-coffee-domain-security.yml
+- type: WellKnown
+  url: well-known/atomo-coffee-well-known.yml
+- type: PrivacyPolicy
+  url: https://atomocoffee.com/pages/privacy-policy
+- type: Support
+  url: https://atomocoffee.com/pages/contact
 - type: Website
   url: https://atomocoffee.com/
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
