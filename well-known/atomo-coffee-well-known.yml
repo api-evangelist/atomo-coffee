@@ -2,21 +2,26 @@ generated: '2026-07-18'
 method: searched
 source: live probe of https://atomocoffee.com/.well-known/*
 host: https://atomocoffee.com
-note: >-
-  atomocoffee.com is a Shopify-hosted storefront. The openid-configuration and
-  oauth-authorization-server documents are Shopify's customer-account OIDC/OAuth
-  discovery for this store (issuer https://shopify.com/authentication/50546278563),
+note: atomocoffee.com is a Shopify-hosted storefront. The openid-configuration and oauth-authorization-server
+  documents are Shopify's customer-account OIDC/OAuth discovery for this store (issuer https://shopify.com/authentication/50546278563),
   served on the Atomo host. Atomo Coffee publishes no first-party developer API.
-documents:
-- path: /.well-known/openid-configuration
-  status: 200
-  file: atomo-coffee-openid-configuration.json
-- path: /.well-known/oauth-authorization-server
-  status: 200
-  file: atomo-coffee-oauth-authorization-server.json
-- path: /.well-known/security.txt
-  status: 301
-- path: /.well-known/api-catalog
-  status: 301
-- path: /.well-known/ai-plugin.json
-  status: 301
+hosts:
+- host: https://atomocoffee.com
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: atomo-coffee-openid-configuration.json
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: atomo-coffee-oauth-authorization-server.json
+  - path: /.well-known/security.txt
+    status: 301
+  - path: /.well-known/api-catalog
+    status: 301
+  - path: /.well-known/ai-plugin.json
+    status: 301
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
