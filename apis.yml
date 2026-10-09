@@ -31,6 +31,7 @@ description: 'Atomo Coffee is a Seattle-based food-tech company that makes beanl
   packaged-goods brand and publishes no first-party developer API; this profile is maintained in the API
   Evangelist network as a company record. Sector: deep-tech / food-tech.'
 url: https://raw.githubusercontent.com/api-evangelist/atomo-coffee/refs/heads/main/apis.yml
+x-harvest-source-url: https://www.nasdaqprivatemarket.com/company/atomo/
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
